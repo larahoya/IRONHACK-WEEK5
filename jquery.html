@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <style type="text/css">
+      .unicorn-mode {
+        color: blue;
+        background: linear-gradient(to bottom, rgba(248,80,50,1) 0%, rgba(112,47,128,1) 21%, rgba(245,140,12,1) 39%, rgba(121,240,24,1) 71%, rgba(45,39,230,1) 100%);
+      }
+      .unicorn-mode p {
+        color: red;
+      }
+      .unicorn-mode {
+        color: green;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container" style="margin-top: 50px;">
+      <button class="btn btn-primary hello-button">Do Something</button>
+    </div>
+    <div class="container" style="margin-top: 50px;">
+      <button class="hide-button">Hide</button>
+    </div>
+    <div class="container" style="margin-top: 50px;">
+      <button class="unicorn-button">Unicorn mode</button>
+    </div>
+    <button>Tacos</button>
+    <button>Do stuff</button>
+    <form id='my_form'>
+      <input id='text' type='text' name='text'>
+      <button type='submit'>Send</button>
+    </form>
+    <script type="text/javascript">
+      $('.unicorn-button').on('click', function () {
+        $('.all').toggleClass('unicorn-mode');
+      });
+      $('.hide-button').on('click', function () {
+        $('.all').toggle();
+      });
+      $('.hello-button').on('click', function () {
+         alert('hello world');
+      });
+      $('button').on('click', function(event) {
+        $(event.currentTarget).hide();
+      });
+      $('#my_form').on('submit', function(event) {
+        var text = $('#text').val();
+        if (text === "") {
+          event.preventDefault();
+          alert("Rellena los campos");
+        }
+      });
+    </script>
+    <!-- <div class='all'>
+    <p>Hola</p>
+    <p>Adios</p>
+    <p class='js-class'>Class</p>
+    <p id='js-id'>Id</p>
+    <p data-hook='coffee one'>Coffee 1</p>
+    <p data-hook='coffee two'>Coffee 2</p>
+    <ul class='list'>
+      <li>Zero</li>
+      <li>One</li>
+      <li>Two</li>
+      <li>Three</li>
+      <li>Four</li>
+    </ul>
+    <p>I like pizza.</p>
+    <h1 id='title'>jQuery exercises</h1>
+    <button>Tacos</button>
+    <button>Do stuff</button>
+    <div class='container'>
+      <p id='1'>prepend me</p>
+      <p id='2'>before me</p>
+      <p id='3'>after me</p>
+    </div>
+    <input type="text" id='info' value="hello world">
+    <p>Add the h1 on the top of this paragraph</p>
+  </div> -->
+  </body>
+</html>

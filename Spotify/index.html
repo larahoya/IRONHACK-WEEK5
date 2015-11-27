@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Spotify</title>
+  <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+  <link rel="stylesheet" type="text/css" href="./style.css">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css" integrity="sha512-dTfge/zgoMYpP7QbHy4gWMEGsbsdZeCXz7irItjcC3sPUFtf0kuFbDz/ixG7ArTxmDjLXDmezHubeNikyKGVyQ==" crossorigin="anonymous">
+
+</head>
+
+<body>
+  <div class="container-fluid">
+  
+  <div id="nav" class="row">
+  <h2>Spotify Artist Search</h2>
+  <form>
+    <input id="input-name" type="text" placeholder="Name of the artist" name="name">
+    <button id="btn-submit" type="submit">Search</button>
+  </form>
+  </div>
+  
+  
+  <div class="row" id="artist-list"></div>
+  
+
+  
+  
+  <div class="modal fade" id="my_modal">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <h4 id="modal-title">List of Albums</h4>
+      </div>
+      <div class="modal-body">
+        <p id="list"></p>
+      </div>
+    </div>
+  </div>
+  </div>
+
+
+  </div>
+
+
+
+
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js" integrity="sha512-K1qjQ+NcF2TYO/eI3M6v8EiNYZfA95pQumfvcVrTHtwQVDG+aHRqLi/ETn2uB+1JqwYqVG3LIvdm9lj6imS/pQ==" crossorigin="anonymous"></script>
+  <script type="text/javascript" src="exercise.js"></script>
+</body>
+
+</html>
